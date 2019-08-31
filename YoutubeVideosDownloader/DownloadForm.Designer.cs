@@ -46,7 +46,9 @@ namespace clusterbee_YoutubeVideosDownloader
             this.lblByClusterbee = new System.Windows.Forms.LinkLabel();
             this.webBrowser = new System.Windows.Forms.WebBrowser();
             this.btnRemoveVideo = new System.Windows.Forms.Button();
+            this.picb_youtube = new System.Windows.Forms.PictureBox();
             this.gbDstFolders.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picb_youtube)).BeginInit();
             this.SuspendLayout();
             // 
             // lblYoutubeLink
@@ -202,9 +204,6 @@ namespace clusterbee_YoutubeVideosDownloader
             // 
             // webBrowser
             // 
-            this.webBrowser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.webBrowser.Location = new System.Drawing.Point(25, 400);
             this.webBrowser.Margin = new System.Windows.Forms.Padding(0);
             this.webBrowser.MinimumSize = new System.Drawing.Size(20, 20);
@@ -225,11 +224,23 @@ namespace clusterbee_YoutubeVideosDownloader
             this.btnRemoveVideo.UseVisualStyleBackColor = true;
             this.btnRemoveVideo.Click += new System.EventHandler(this.BtnRemoveVideo_Click);
             // 
+            // picb_youtube
+            // 
+            this.picb_youtube.BackColor = System.Drawing.SystemColors.Window;
+            this.picb_youtube.Image = global::clusterbee_YoutubeVideosDownloader.Properties.Resources.youtube200;
+            this.picb_youtube.Location = new System.Drawing.Point(247, 475);
+            this.picb_youtube.Name = "picb_youtube";
+            this.picb_youtube.Size = new System.Drawing.Size(200, 200);
+            this.picb_youtube.TabIndex = 15;
+            this.picb_youtube.TabStop = false;
+            this.picb_youtube.Click += new System.EventHandler(this.PictureBox1_Click);
+            // 
             // DownloadForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 776);
+            this.Controls.Add(this.picb_youtube);
             this.Controls.Add(this.btnRemoveVideo);
             this.Controls.Add(this.webBrowser);
             this.Controls.Add(this.lblByClusterbee);
@@ -251,6 +262,7 @@ namespace clusterbee_YoutubeVideosDownloader
             this.Text = "Youtube Videos Downloader  v.1.0";
             this.gbDstFolders.ResumeLayout(false);
             this.gbDstFolders.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picb_youtube)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,6 +285,7 @@ namespace clusterbee_YoutubeVideosDownloader
         private System.Windows.Forms.LinkLabel lblByClusterbee;
         private System.Windows.Forms.WebBrowser webBrowser;
         private System.Windows.Forms.Button btnRemoveVideo;
+        private System.Windows.Forms.PictureBox picb_youtube;
     }
 }
 

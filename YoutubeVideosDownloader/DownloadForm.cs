@@ -138,10 +138,15 @@ namespace clusterbee_YoutubeVideosDownloader
             System.Diagnostics.Process.Start("https://github.com/clusterbee");
         }
 
-        private void ClearWebBrowser(WebBrowser myWebBrowser) => myWebBrowser.DocumentText = "";
+        private void ClearWebBrowser(WebBrowser myWebBrowser)
+        {
+            myWebBrowser.DocumentText = "";
+            this.picb_youtube.Visible = true;
+        }
 
         private void PlayYoutubeVideo(string idVideo, WebBrowser myWebBrowser)
         {
+            this.picb_youtube.Visible = false;
             myWebBrowser.DocumentText =
                 $"<html><head><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"/></head><body><iframe width=\"100%\" height=\"330\" src=\"https://www.youtube.com/embed/{idVideo}?rel=0&autoplay=0&loop=0&playlist={idVideo}\" frameborder = \"0\" allow = \"encrypted-media\" allowfullscreen></iframe></body></html>";
         }
@@ -149,6 +154,11 @@ namespace clusterbee_YoutubeVideosDownloader
         private void BtnRemoveVideo_Click(object sender, EventArgs e)
         {
             this.txtURLYoutube.Text = "";
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
